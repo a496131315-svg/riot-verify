@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARAM Insight — Product Overview</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --line: #2a3038;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --accent: #d4af37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 72px 24px 96px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 40px; }
+  .brand {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: -0.4px; }
+  .tagline { color: var(--muted); font-size: 16px; margin: 0; }
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 18px 0;
+  }
+  ul { padding-left: 22px; margin: 0 0 16px; }
+  li { margin-bottom: 8px; }
+  .apis { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
+  .apis span {
+    background: #1f262e;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    color: var(--fg);
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Riot Developer Portal</div>
+    <h1>ARAM Insight</h1>
+    <p class="tagline">A statistics and reference companion for ARAM and ARAM: Mayhem players.</p>
+  </header>
+
+  <h2>About</h2>
+  <p>
+    ARAM Insight is a lightweight companion tool that helps players make better in-game
+    decisions in ARAM (All Random All Mid) and its featured mode, ARAM: Mayhem. It presents
+    champion statistics, augment references, and recommended builds in a concise, single-card
+    layout designed for phone screens.
+  </p>
+  <p>
+    The product's particular focus is ARAM: Mayhem, where players choose from a large pool of
+    augments. ARAM Insight helps them understand what each augment does and how it is generally
+    performing, so that newcomers are not overwhelmed by the mode's complexity.
+  </p>
+
+  <h2>Riot Games APIs Used</h2>
+  <div class="card">
+    <p style="margin-bottom:10px">Limited to the Standard APIs. No Tournaments API access is requested.</p>
+    <div class="apis">
+      <span>Match-V5</span>
+      <span>Account-V1</span>
+      <span>Summoner-V4</span>
+      <span>LoL-Status-V1</span>
+    </div>
+  </div>
+
+  <h2>How It Works</h2>
+  <ul>
+    <li>All companion content is generated from aggregate statistics computed over match data.</li>
+    <li>Only aggregated statistics are stored — no raw match data is retained.</li>
+    <li>API keys are held server-side inside a cloud function environment and are never exposed to any client.</li>
+  </ul>
+
+  <h2>Delivery</h2>
+  <p>
+    ARAM Insight is delivered as a WeChat Mini Program, serving players on overseas servers,
+    including Chinese-speaking players who play on overseas servers. It is a free,
+    non-commercial tool — there are no paid features, no advertising on API-derived content,
+    and no betting or gambling functionality of any kind.
+  </p>
+
+  <h2>URL Verification</h2>
+  <div class="card">
+    <p style="margin-bottom:8px">
+      This site is used for Riot Developer Portal URL ownership verification.
+      The required verification file is available at:
+    </p>
+    <p style="margin:0">
+      <a href="./riot.txt">https://a496131315-svg.github.io/riot-verify/riot.txt</a>
+    </p>
+  </div>
+
+  <footer>
+    ARAM Insight is an independent, unofficial companion tool and is not affiliated with,
+    endorsed by, or sponsored by Riot Games. Riot Games and League of Legends are trademarks
+    or registered trademarks of Riot Games, Inc.
+  </footer>
+
+</div>
+</body>
+</html>
